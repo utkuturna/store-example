@@ -8,6 +8,7 @@ import { createStyles, fade, Theme, makeStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -72,7 +73,8 @@ export default function Header() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+      <Container maxWidth="lg">
+        <Toolbar disableGutters>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -104,6 +106,7 @@ export default function Header() {
             />
           </div>
         </Toolbar>
+        </Container>
       </AppBar>
     </div>
   );
